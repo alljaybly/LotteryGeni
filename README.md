@@ -79,7 +79,7 @@ Clone the Repository:
 
 bash
 Copy
-git clone https://github.com/your-username/random-number-generator.git
+git clone(https://github.com/alljaybly/LotteryGeni.git)
 cd random-number-generator
 Set Up Firebase:
 
