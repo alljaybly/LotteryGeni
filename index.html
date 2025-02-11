@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Generate random lottery numbers for Daily Lotto, Powerball, Lotto Plus 1, Lotto Plus 2, and International Lottery. Save your favorite numbers and customize your experience.">
+  <meta name="keywords" content="random number generator, lottery numbers, Daily Lotto, Powerball, Lotto Plus 1, Lotto Plus 2, International Lottery">
+  <meta name="author" content="Your Name">
+  <title>Random Number Generator - Lottery Numbers</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Login/Registration Section -->
+    <div id="auth-section">
+      <h1 class="dripping-text">Random Number Generator</h1>
+      <div id="auth-form">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button id="login">Login</button>
+        <button id="register">Register</button>
+      </div>
+    </div>
+
+    <!-- Main App Section (Hidden Initially) -->
+    <div id="app-section" class="hidden">
+      <h1 class="dripping-text">Random Number Generator</h1>
+      <div class="lottery-options">
+        <label for="lottery-type">Select Lottery Type:</label>
+        <select id="lottery-type">
+          <option value="daily-lotto">Daily Lotto</option>
+          <option value="powerball">Powerball</option>
+          <option value="lotto-plus-1">Lotto Plus 1</option>
+          <option value="lotto-plus-2">Lotto Plus 2</option>
+          <option value="international">International Lottery</option>
+        </select>
+      </div>
+      <div class="number-inputs">
+        <label for="main-numbers">Main Numbers:</label>
+        <input type="number" id="main-numbers" placeholder="Enter number of main numbers" min="1">
+        <label for="bonus-balls">Bonus Balls:</label>
+        <input type="number" id="bonus-balls" placeholder="Enter number of bonus balls" min="0">
+        <button id="generate">Generate Numbers</button>
+      </div>
+      <div class="output">
+        <h2>Generated Numbers:</h2>
+        <div id="main-numbers-output"></div>
+        <div id="bonus-balls-output"></div>
+        <button id="save-favorites">Save to Favorites</button>
+      </div>
+      <div class="favorites">
+        <h2>Favorite Numbers:</h2>
+        <div id="favorites-list"></div>
+      </div>
+      <div class="settings">
+        <h2>Settings</h2>
+        <label for="default-lottery">Default Lottery Type:</label>
+        <select id="default-lottery">
+          <option value="daily-lotto">Daily Lotto</option>
+          <option value="powerball">Powerball</option>
+          <option value="lotto-plus-1">Lotto Plus 1</option>
+          <option value="lotto-plus-2">Lotto Plus 2</option>
+          <option value="international">International Lottery</option>
+        </select>
+        <button id="save-settings">Save Settings</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
